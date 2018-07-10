@@ -1,0 +1,53 @@
+<header id="header" id="home">
+		  		<div class="header-top">
+		  			<div class="container">
+				  		<div class="row">
+				  			<div class="col-lg-6 col-sm-6 col-4 header-top-left no-padding">
+				  				<ul>
+									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<!-- <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
+									<!-- <li><a href="#"><i class="fa fa-behance"></i></a></li> -->
+				  				</ul>
+				  			</div>
+				  			<div class="col-lg-6 col-sm-6 col-8 header-top-right no-padding">
+				  				<a href="tel:+91 9611127864">+91 9611127864</a>
+				  				<a href=""><span class="__cf_email__" data-cfemail="">[Call us]</span></a>				
+				  			</div>
+				  		</div>			  					
+		  			</div>
+				</div>
+			    <div class="container main-menu">
+			    	<div class="row align-items-center justify-content-between d-flex">
+				      <div id="logo">
+				        <a href="{{ path_for('home') }}"><img src="{{ base_url() }}/img/logo.png" alt="" title="" /></a>
+				      </div>
+				      <nav id="nav-menu-container">
+				        <ul class="nav-menu">
+				          <li class="menu-active"><a href="{{ path_for('home') }}">Home</a></li>
+				          <li><a href="{{ path_for('about') }}">About</a></li>
+				          <li class="menu-has-children"><a href="#">Sectors</a>
+				            <ul>
+				          
+				              <li><a href="{{ path_for('plywoood.and.lamination') }}">Plywood &amp; Lamination</a></li>
+											<li><a href="{{ path_for('construction') }}">Construction</a></li>
+											<li><a href="{{ path_for('real.estate') }}">Real Estate</a></li>
+											<li><a href="{{ path_for('dairy.farming') }}">Dairy farming</a></li>
+											<li><a href="{{ path_for('car.rentals') }}">Car rentals</a></li>
+											<li><a href="{{ path_for('land.development') }}">Land development</a></li>
+											<li><a href="{{ path_for('textiles') }}">textiles</a></li>
+											<li><a href="{{ path_for('fmcg') }}">FMCG</a></li>
+											<li><a href="{{ path_for('interior.design') }}">Interior design &amp; furnishing</a></li>
+				            </ul>
+						  </li>		
+					
+						<li>
+							<a href="{{ path_for('gallery') }}">Gallery</a>
+						</li>
+				          <li><a href="{{ path_for('career') }}">Career</a></li>
+			              <li><a href="{{ path_for('contact') }}">Contact Us</a></li>
+				        </ul>
+				      </nav><!-- #nav-menu-container -->		    		
+			    	</div>
+			    </div>
+			  </header><!-- #header -->
