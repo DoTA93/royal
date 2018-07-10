@@ -76,11 +76,11 @@ $app->post('/send', function ($request, $response, $args) {
     # Now, compose and send your message.
     # $mg->messages()->send($domain, $params);
     $mg->messages()->send('idevia.in', [
-      'from'    => "FCI Mailer <no-reply@flipcoininvestment.com>",
+      'from'    => "Royalty Iquinox <no-reply@royaltyiquinox.com>",
       // 'to'      => 'mortuzalam@gmail.com',
-      'to'      => 'flipcoininvestments@gmail.com',
+      'to'      => 'info@royaltyiquinox.com',
       'subject' => 'Website Contact Form',
-      'text'    => "Hello FCI, My name is " . $name . " . Contact ph: " . $phone . " & email: " . $email . "I want to say: " . $message
+      'text'    => "Hello, My name is " . $name . " . Contact ph: " . $phone . " & email: " . $email . "I want to say: " . $message
     ]);
 
     // $arr = array('send' => 'true');
