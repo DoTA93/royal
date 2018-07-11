@@ -15,7 +15,7 @@
 							<p class="text-white">
 								Royalty Iquinox Pvt. Ltd. expertise is in the Construction, Plywood &amp; lamination, Dairy farming, <br> Car rentals, textiles, FMCG, Interior Design &amp; Furnishing. <br> 
 							</p>
-							<a href="#" class="primary-btn header-btn text-uppercase">Get Started</a>
+							<a href="{{path_for('about')}}" class="primary-btn header-btn text-uppercase">Get Started</a>
 						</div>												
 					</div>
 				</div>
@@ -28,7 +28,7 @@
 					<div class="row">
 						<div class="col-lg-4">	
 							<div class="single-cat d-flex flex-column">
-								<a href="#" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-bug"></span></span></a>
+								<a href="{{path_for('plywoood.and.lamination')}}" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-bug"></span></span></a>
 								<h4 class="mb-20" style="margin-top: 23px;">Plywood &amp; Lamination</h4>
 								<p>
 									The plywood and lamination products are used extensively in commercial and domestic settings.
@@ -37,7 +37,7 @@
 						</div>
 						<div class="col-lg-4">	
 							<div class="single-cat">
-								<a href="#" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-bug"></span></span></a>
+								<a href="{{path_for('construction')}}" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-bug"></span></span></a>
 								<h4 class="mt-40 mb-20">Construction</h4>
 								<p>
 									 In a turnkey scenario, we bring the expertise of all our divisions to focus on every single aspect of a project.
@@ -46,7 +46,7 @@
 						</div>
 						<div class="col-lg-4">
 							<div class="single-cat">
-								<a href="#" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-bug"></span></span></a>
+								<a href="{{path_for('real.estate')}}" class="hb-sm-margin mx-auto d-block"><span class="hb hb-sm inv hb-facebook-inv"><span class="lnr lnr-bug"></span></span></a>
 								<h4 class="mt-40 mb-20">Real Estate</h4>
 								<p>
 									We specialises in creating modern spaces that embrace the beauty of nature and comforts of urban living.
@@ -55,7 +55,7 @@
 						</div>
 						<div class="col-lg-4">
 							<div class="single-cat">
-								<a href="#" class="hb-sm-margin mx-auto d-block">
+								<a href="{{path_for('dairy.farming')}}" class="hb-sm-margin mx-auto d-block">
 									<span class="hb hb-sm inv hb-facebook-inv">
 										<span class="lnr lnr-bug"></span>
 									</span>
@@ -68,7 +68,7 @@
 						</div>
 						<div class="col-lg-4">
 							<div class="single-cat">
-								<a href="#" class="hb-sm-margin mx-auto d-block">
+								<a href="{{path_for('car.rentals')}}" class="hb-sm-margin mx-auto d-block">
 									<span class="hb hb-sm inv hb-facebook-inv">
 										<span class="lnr lnr-bug"></span>
 									</span>
@@ -81,7 +81,7 @@
 						</div>
 						<div class="col-lg-4">
 							<div class="single-cat">
-								<a href="#" class="hb-sm-margin mx-auto d-block">
+								<a href="{{path_for('land.development')}}" class="hb-sm-margin mx-auto d-block">
 									<span class="hb hb-sm inv hb-facebook-inv">
 										<span class="lnr lnr-bug"></span>
 									</span>
@@ -94,7 +94,7 @@
 						</div>
 						<div class="col-lg-4">
 							<div class="single-cat">
-								<a href="#" class="hb-sm-margin mx-auto d-block">
+								<a href="{{path_for('textiles')}}" class="hb-sm-margin mx-auto d-block">
 									<span class="hb hb-sm inv hb-facebook-inv">
 										<span class="lnr lnr-bug"></span>
 									</span>
@@ -107,7 +107,7 @@
 						</div>
 						<div class="col-lg-4">
 							<div class="single-cat">
-								<a href="#" class="hb-sm-margin mx-auto d-block">
+								<a href="{{path_for('fmcg')}}" class="hb-sm-margin mx-auto d-block">
 									<span class="hb hb-sm inv hb-facebook-inv">
 										<span class="lnr lnr-bug"></span>
 									</span>
@@ -120,7 +120,7 @@
 						</div>
 						<div class="col-lg-4">
 							<div class="single-cat">
-								<a href="#" class="hb-sm-margin mx-auto d-block">
+								<a href="{{path_for('interior.design')}}" class="hb-sm-margin mx-auto d-block">
 									<span class="hb hb-sm inv hb-facebook-inv">
 										<span class="lnr lnr-bug"></span>
 									</span>
@@ -160,11 +160,14 @@ Royalty Iquinox believes that a Company is a family, a group of Professionals wo
 								<h4 class="text-white pb-20">Request a Service</h4>
 								<div class="form-select" id="service-select">
 									<select>
-										<option value="1">Select Service</option>
-										<option value="2">Service One</option>
-										<option value="3">Service Two</option>
-										<option value="4">Service Three</option>
-										<option value="5">Service Four</option>
+										<option value="1">Plywood &amp; Lamination</option>
+										<option value="2">Real Estate</option>
+										<option value="3">Textiles</option>
+										<option value="4">Dairy Farming</option>
+										<option value="5">Car Rentals</option>
+										<option value="5">Construction</option>
+										<option value="5">Land Development</option>
+										<option value="5">FMCG</option>
 									</select>
 								</div>								
 								<input type="text" class="form-control" placeholder="name">
@@ -290,7 +293,7 @@ Royalty Iquinox believes that a Company is a family, a group of Professionals wo
 					<div class="row feedback-contents justify-content-center align-items-center">
 						<div class="col-lg-6 feedback-left relative d-flex justify-content-center align-items-center">
 							<div class="overlay overlay-bg"></div>
-							<a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img class="img-fluid" src="img/play-btn.png" alt=""></a>
+							<a class="play-btn" href=""><img class="img-fluid" src="img/play-btn.png" alt=""></a>
 						</div>
 						<div class="col-lg-6 feedback-right">
 							<div class="active-review-carusel">
