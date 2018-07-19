@@ -150,25 +150,27 @@ Royalty Iquinox believes that a Company is a family, a group of Professionals wo
 							<a class="primary-btn" href="#">Get Started Now</a>
 						</div>
 						<div class="col-lg-4 col-md-12 home-about-right relative">
-							<form class="form-wrap" action="#">
+							<form class="form-wrap request-form">
 								<h4 class="text-white pb-20">Request a Service</h4>
 								<div class="form-select" id="service-select">
-									<select>
-										<option value="1">Plywood &amp; Lamination</option>
-										<option value="2">Real Estate</option>
-										<option value="3">Textiles</option>
-										<option value="4">Dairy Farming</option>
-										<option value="5">Car Rentals</option>
-										<option value="5">Construction</option>
-										<option value="5">Land Development</option>
-										<option value="5">FMCG</option>
+									<select name="request-type">
+										<option value="Plywood &amp; Lamination">Plywood &amp; Lamination</option>
+										<option value="Real Estate">Real Estate</option>
+										<option value="Textiles">Textiles</option>
+										<option value="Dairy Farming">Dairy Farming</option>
+										<option value="Car Rentals">Car Rentals</option>
+										<option value="Construction">Construction</option>
+										<option value="Land Development">Land Development</option>
+										<option value="FMCG">FMCG</option>
 									</select>
 								</div>								
-								<input type="text" class="form-control" placeholder="name">
-								<input type="phone" class="form-control" placeholder="Phone Number">
-								<input type="email" class="form-control" placeholder="Email Address">
+								<input type="text" class="form-control" name="name" placeholder="name">
+								<input type="phone" class="form-control" name="phone" placeholder="Phone Number">
+								<input type="email" class="form-control" name="email" placeholder="Email Address">
 								<textarea name="message" id="" cols="30" rows="5" placeholder="Message" class="form-control"></textarea>
-								<button class="primary-btn">Request Service</button>
+								<button class="primary-btn btn-submit" type="submit">Request Service</button>
+								<input type="hidden" name="apiKey" value="N9ykcV1TcthbyTEk">
+								<p class="form-feedback font-weight-bold text-warning">&nbsp;</p>
 							</form>
 						</div>
 					</div>
@@ -479,5 +481,43 @@ Royalty Iquinox believes that a Company is a family, a group of Professionals wo
 				</div>	
 			</section>
 			<!-- end blog Area -->	 #}
+<script>
+	$('.btn-submit').on('click', function(e) {
+		e.preventDefault();
+		// contact form submit
+		$form = $('.request-form'),
+		$feedbackBlock = $('.form-feedback'),
+		data = $form.serialize();
 
+		// return;
+		$.ajax({
+			type: "POST",
+			contentType: 'application/x-www-form-urlencoded',
+			url: "//icoinguru.com",
+			crossDomain: true,
+			dataType: 'json',
+			data: data,
+			success: function (data) {
+				console.log(data);
+				$feedbackBlock.html("<span>Thank you contacting us. We will reach you very soon.</span>")
+					.hide()
+					.fadeIn(1500);
+				$form.trigger("reset");
+					
+			},
+			error: function (err) {
+				console.log("CONNECT FORMLY ERR: ", err);
+			}
+		})
+		.done(function() {
+				$feedbackBlock = $('.form-feedback');
+			setTimeout(function () {
+				$feedbackBlock.fadeOut(1500);
+				setTimeout(function() {
+					$feedbackBlock.html('&nbsp;');
+				}, 1500);
+			}, 5000);
+		});
+	});
+</script>
 {% endblock %}

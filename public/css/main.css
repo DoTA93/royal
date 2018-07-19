@@ -1907,6 +1907,9 @@ h1, h2, h3, h4, h5, h6 {
 .header-top .header-top-left a:hover i {
   color: #fab700;
 }
+.header-top .header-top-left a:hover {
+  color: #fab700;
+}
 
 .header-top .header-top-right {
   text-align: right;

@@ -54,7 +54,7 @@
 							</div>														
 						</div>
 						<div class="col-lg-8">
-							<form class="form-area " id="myForm" action="/send" method="post" class="contact-form text-right">
+							<form class="form-area contact-form text-right" id="myForm">
 								<div class="row">	
 									<div class="col-lg-6 form-group">
 										<input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
@@ -62,11 +62,12 @@
 										<input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
 
 										<input name="subject" placeholder="Enter your subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your subject'" class="common-input mb-20 form-control" required="" type="text">
-										<div class="mt-20 alert-msg" style="text-align: left;"></div>
+										<div class="mt-20 alert-msg" style="text-align: left;"><p class="form-feedback font-weight-bold text-warning">&nbsp;</p></div>
+										<input type="hidden" name="apiKey" value="N9ykcV1TcthbyTEk">									
 									</div>
 									<div class="col-lg-6 form-group">
 										<textarea class="common-textarea form-control" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
-										<button class="genric-btn primary circle mt-30" style="float: right;">Send Message</button>								
+										<button class="genric-btn primary btn-submit circle mt-30" style="float: right;">Send Message</button>								
 									</div>
 								</div>
 							</form>	
@@ -75,5 +76,43 @@
 				</div>	
 			</section>
 			<!-- End contact-page Area -->
+<script>
+	$('.btn-submit').on('click', function(e) {
+		e.preventDefault();
+		// contact form submit
+		$form = $('.contact-form'),
+		$feedbackBlock = $('.form-feedback'),
+		data = $form.serialize();
 
+		// return;
+		$.ajax({
+			type: "POST",
+			contentType: 'application/x-www-form-urlencoded',
+			url: "//icoinguru.com",
+			crossDomain: true,
+			dataType: 'json',
+			data: data,
+			success: function (data) {
+				console.log(data);
+				$feedbackBlock.html("<span>Thank you contacting us. We will reach you very soon.</span>")
+					.hide()
+					.fadeIn(1500);
+				$form.trigger("reset");
+					
+			},
+			error: function (err) {
+				console.log("CONNECT FORMLY ERR: ", err);
+			}
+		})
+		.done(function() {
+				$feedbackBlock = $('.form-feedback');
+			setTimeout(function () {
+				$feedbackBlock.fadeOut(1500);
+				setTimeout(function() {
+					$feedbackBlock.html('&nbsp;');
+				}, 1500);
+			}, 5000);
+		});
+	});
+</script>
 {% endblock %}
